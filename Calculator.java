@@ -395,36 +395,36 @@ public class Calculator extends javax.swing.JFrame implements Calculations {
     private void percentageButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_percentageButtonActionPerformed
         // TODO add your handling code here:
         if (jLabel1.getText().length() > 0 && jTextField1.getText().length() > 0) {
-
+            
             toBeCalculatedValue = Double.parseDouble(jTextField1.getText());
             percentage(Double.parseDouble(jLabel1.getText().split(" ")[0]), toBeCalculatedValue);
-
-        }
+            
+        } 
     }//GEN-LAST:event_percentageButtonActionPerformed
 
     private void percentage(double a, double b) {
-        switch (sign) {
+        switch(sign) {
             case "+":
-                add(((a * b) / 100), a);
+                add(((a*b)/100), a);
                 break;
-
-            case "-":
-                subtract(((a * b) / 100), a);
+                
+              case "-":
+                subtract(((a*b)/100), a);
                 break;
-
-            case "*":
-                multiply(((a * b) / 100), a);
+                
+                  case "*":
+                multiply(((a*b)/100), a);
                 break;
-
-            case "/":
-                divide(((a * b) / 100), a);
+                
+                  case "/":
+                divide(((a*b)/100), a);
                 break;
         }
     }
-
+    
     private void oneByXButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_oneByXButtonActionPerformed
         // TODO add your handling code here:
-        if (jTextField1.getText().length() > 0) {
+        if(jTextField1.getText().length() > 0) {
             toBeCalculatedValue = Double.parseDouble(jTextField1.getText());
             oneByX(toBeCalculatedValue);
         }
@@ -434,30 +434,30 @@ public class Calculator extends javax.swing.JFrame implements Calculations {
         // TODO add your handling code here:
         toBeCalculatedValue = Double.parseDouble(jTextField1.getText());
         sqrRoot(toBeCalculatedValue);
-
+        
     }//GEN-LAST:event_sqrtButtonActionPerformed
 
     private void oneByX(double a) {
-        jTextField1.setText(Double.toString(1 / a));
+        jTextField1.setText(Double.toString(1/a));
     }
-
+    
     private void sqrRoot(double a) {
         jTextField1.setText(Double.toString(Math.sqrt(a)));
     }
-
+    
     private void x2ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_x2ButtonActionPerformed
         // TODO add your handling code here:
-        if (jTextField1.getText().length() > 0) {
+        if(jTextField1.getText().length() > 0) {
             toBeCalculatedValue = Double.parseDouble(jTextField1.getText());
             square(toBeCalculatedValue);
         }
-
+        
     }//GEN-LAST:event_x2ButtonActionPerformed
 
     private void square(double x) {
         jTextField1.getText();
     }
-
+    
     private void CButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CButtonActionPerformed
         // TODO add your handling code here:
         jTextField1.setText("");
